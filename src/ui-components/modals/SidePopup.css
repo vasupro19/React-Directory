@@ -1,0 +1,119 @@
+/* Side Popup Backdrop */
+.side-popup-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 998;
+  display: none; /* Hide the backdrop initially */
+}
+
+.side-popup-backdrop.visible {
+  opacity: 1;
+  display: block; /* Show the backdrop when the popup is visible */
+}
+
+/* Side Popup */
+.side-popup {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Fully closed initially */
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  z-index: 999;
+  padding: 20px;
+}
+
+.side-popup.partially-visible {
+  right: -240px; /* Partially visible when toggled */
+}
+
+.side-popup.visible {
+  right: 0; /* Fully visible when open */
+}
+
+/* Side Popup Content */
+.side-popup-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-content {
+  margin-top: 20px;
+}
+
+.close-button {
+  align-self: flex-end;
+  padding: 8px 16px;
+  font-size: 16px;
+  color: white;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #c0392b;
+}
+
+/* Wallet section */
+.wallet-section {
+  margin-top: 20px;
+}
+
+.wallet-section p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.add-money-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #47bb23;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-money-button:hover {
+  background-color: #399e1e;
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 600px) {
+  .side-popup {
+    width: 70%;
+    margin-right: -20%;
+    /* right: -80%; Fully closed for mobile */
+  }
+
+  .side-popup.partially-visible {
+    right: 20%; /* Partially visible on mobile */
+  }
+
+  .wallet-section p {
+    font-size: 16px; /* Adjust font size for mobile */
+  }
+
+  .add-money-button {
+    padding: 8px 16px; /* Adjust padding for mobile */
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+
+  .close-button {
+    padding: 6px 12px; /* Adjust padding for mobile */
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+}

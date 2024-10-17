@@ -1,0 +1,116 @@
+/* Container styles */
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 30vh;
+  width: 90vw; /* Adjusted for better responsiveness */
+  max-width: 500px;
+}
+
+/* Header styles */
+.grid-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.grid-header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #47bb23;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Menu icon styles */
+.menu-icon {
+  cursor: pointer;
+  font-size: 24px;
+  color: #47bb23;
+  margin-left: auto; /* Ensures the icon stays at the right edge */
+}
+
+/* Grid styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Grid item styles */
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  font-size: 25px;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Input field styles */
+.amount-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 100%; /* Adjusted to be more responsive */
+  max-width: 800px;
+}
+
+/* Button styles */
+.bet-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #47bb23;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.bet-button:hover {
+  background-color: #399e1e;
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 600px) {
+  .grid-header h1 {
+    font-size: 24px; /* Adjust font size for mobile */
+  }
+
+  .grid-item {
+    padding: 15px;
+    font-size: 16px; /* Adjust font size for mobile */
+  }
+
+  .amount-input {
+    width: 90%; /* Adjust width for mobile */
+    max-width: 300px;
+  }
+
+  .bet-button {
+    padding: 8px 16px; /* Adjust padding for mobile */
+  }
+
+  .menu-icon {
+    font-size: 30px; /* Increase size slightly for better visibility on mobile */
+    margin-right: 35px; /* Add some space between the icon and the edge of the screen */
+  }
+}

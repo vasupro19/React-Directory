@@ -1,0 +1,46 @@
+form {
+  /* max-width: 400px;
+   */
+  width: 42vh;
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+div {
+  margin-bottom: 1em;
+}
+
+label {
+  margin-bottom: 0.5em;
+  color: #333;
+  display: block;
+}
+
+input {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0.7em;
+  border: 2px;
+  color: #090808;
+  background: #22ff00;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.error {
+  color: red;
+  font-size: 0.875em;
+}
